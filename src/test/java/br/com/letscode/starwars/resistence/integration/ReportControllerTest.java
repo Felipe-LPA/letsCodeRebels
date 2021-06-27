@@ -28,32 +28,32 @@ class ReportControllerTest {
 
     @Test
     void testPorcentagemTraidores() throws Exception {
-        assertEquals(1 / 3.0,
+        assertEquals(2 / 7.0,
                 MessageMapper.toObject(
                         mvc.perform(get(baseUri + "/traidores").contentType(MediaType.APPLICATION_JSON)).andDo(print())
                                 .andExpect(status().isOk()).andReturn().getResponse().getContentAsString(),
                         double.class),
-                "A porcentagem deve ser de 1/3");
+                "A porcentagem deve ser de 2/7");
     }
 
     @Test
     void testPorcentagemRebeldes() throws Exception {
-        assertEquals(2 / 3.0,
+        assertEquals(5 / 7.0,
                 MessageMapper.toObject(
                         mvc.perform(get(baseUri + "/rebeldes").contentType(MediaType.APPLICATION_JSON)).andDo(print())
                                 .andExpect(status().isOk()).andReturn().getResponse().getContentAsString(),
                         double.class),
-                "A porcentagem deve ser de 2/3");
+                "A porcentagem deve ser de 5/7");
     }
 
     @Test
     void testPontosTotais() throws Exception {
-        assertEquals(40.0,
+        assertEquals(44.0,
                 MessageMapper.toObject(
                         mvc.perform(get(baseUri + "/pontos").contentType(MediaType.APPLICATION_JSON)).andDo(print())
                                 .andExpect(status().isOk()).andReturn().getResponse().getContentAsString(),
                         double.class),
-                "A soma de pontos deve ser de 40");
+                "A soma de pontos deve ser de 44");
     }
 
     @Test
@@ -66,10 +66,10 @@ class ReportControllerTest {
 
     @Test
     void testPontosRebeldes() throws Exception {
-        assertEquals(29.0, MessageMapper.toObject(
+        assertEquals(33.0, MessageMapper.toObject(
                 mvc.perform(get(baseUri + "/pontos?traidores=false").contentType(MediaType.APPLICATION_JSON))
                         .andDo(print()).andExpect(status().isOk()).andReturn().getResponse().getContentAsString(),
-                double.class), "A soma de pontos deve ser de 29");
+                double.class), "A soma de pontos deve ser de 33");
     }
 
     @Test
