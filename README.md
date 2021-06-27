@@ -39,29 +39,29 @@ Ambos os lados deverão oferecer a mesma quantidade de pontos. Por exemplo, 1 ar
 2) valem 6 comidas (6 x 1) ou 2 munições (2 x 3). <BR>
 A negociação em si não será armazenada, mas os itens deverão ser transferidos de um rebelde a outro. <BR>
   <BR>
-####  Item Pontos <BR>
-#### 1 Arma 4 pontos <BR>
-#### 1 Munição 3 pontos <BR>
-#### 1 Água 2 pontos <BR>
-#### 1 Comida 1 ponto <BR><BR>
-#### • Relatórios <BR>
+  Item    Pontos <BR>
+1 Arma    4 pontos <BR>
+1 Munição 3 pontos <BR>
+1 Água    2 pontos <BR>
+1 Comida  1 ponto <BR><BR>
+### • Relatórios <BR>
 A API deve oferecer os seguintes relatórios:<BR>
-#### 1. Porcentagem de traidores. <BR>
-#### 2. Porcentagem de rebeldes. <BR>
-#### 3. Quantidade média de cada tipo de recurso por rebelde (Ex: 2 armas por rebelde). <BR>
-#### 4. Pontos perdidos devido a traidores. <BR><BR>
+1. Porcentagem de traidores. <BR>
+2. Porcentagem de rebeldes. <BR>
+3. Quantidade média de cada tipo de recurso por rebelde (Ex: 2 armas por rebelde). <BR>
+4. Pontos perdidos devido a traidores. <BR><BR>
 ### Notas <BR><BR>
-#### 1. Deverá ser utilizado Java, Spring boot, Spring Data, Hibernate (pode ser usado o banco de dados H2) 
+1. Deverá ser utilizado Java, Spring boot, Spring Data, Hibernate (pode ser usado o banco de dados H2) 
 e como gerenciador de dependência Maven ou Gradle. <BR>
-#### 2. Não será necessário autenticação. <BR>
-#### 3. Nós ainda nos preocupamos com uma programação adequada (código limpo) e técnicas de 
+2. Não será necessário autenticação. <BR>
+3. Nós ainda nos preocupamos com uma programação adequada (código limpo) e técnicas de 
 arquitetura, você deve demonstrar que é um digno soldado da resistência através das suas 
 habilidades. <BR>
-#### 4. Não esqueça de minimamente documentar os endpoints da sua API e como usa-los. <BR>
-#### 5. Sua API deve estar minimamente coberta por testes (Unitários e/ou integração). <BR>
-#### 6. Da descrição acima você pode escrever uma solução básica ou adicionar requisitos não descritos. 
+4. Não esqueça de minimamente documentar os endpoints da sua API e como usa-los. <BR>
+5. Sua API deve estar minimamente coberta por testes (Unitários e/ou integração). <BR>
+6. Da descrição acima você pode escrever uma solução básica ou adicionar requisitos não descritos. 
 Use seu tempo com sabedoria; Uma solução ótima e definitiva pode levar muito tempo para ser 
 efetiva na guerra, então você deve trazer a melhor solução possível, que leve o mínimo de tempo, 
 mas que ainda seja capaz de demonstrar suas habilidades e provar que você é um soldado valioso 
 para a resistência. <BR>
-#### 7. Comente qualquer dúvida e cada decisão tomada <BR>
+7. Comente qualquer dúvida e cada decisão tomada <BR>
