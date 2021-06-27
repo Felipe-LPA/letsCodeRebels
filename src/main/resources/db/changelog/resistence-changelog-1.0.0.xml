@@ -1,0 +1,192 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.10.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.10.xsd">
+	<changeSet author="bruno" id="1624734705359-1">
+		<createSequence incrementBy="50" sequenceName="item_sq"
+			startValue="100" />
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-2">
+		<createSequence incrementBy="50"
+			sequenceName="localizacao_sq" startValue="100" />
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-3">
+		<createSequence incrementBy="50"
+			sequenceName="rebelde_sq" startValue="100" />
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-4">
+		<createSequence incrementBy="50"
+			sequenceName="troca_sq" startValue="100" />
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-5">
+		<createTable tableName="item">
+			<column name="id" type="BIGINT">
+				<constraints nullable="false" primaryKey="true"
+					primaryKeyName="itemPK" />
+			</column>
+			<column name="nome" type="VARCHAR(200)">
+				<constraints nullable="false" />
+			</column>
+			<column name="ponto" type="INTEGER">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-6">
+		<createTable tableName="inventario">
+			<column name="item_id" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="rebelde_id" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-7">
+		<createTable tableName="localizacao">
+			<column name="id" type="BIGINT">
+				<constraints nullable="false" primaryKey="true"
+					primaryKeyName="localizacaoPK" />
+			</column>
+			<column name="base" type="VARCHAR(200)">
+				<constraints nullable="false" />
+			</column>
+			<column name="galaxia" type="VARCHAR(200)">
+				<constraints nullable="false" />
+			</column>
+			<column name="latitude" type="DOUBLE PRECISION">
+				<constraints nullable="false" />
+			</column>
+			<column name="longitude" type="DOUBLE PRECISION">
+				<constraints nullable="false" />
+			</column>
+			<column name="nome" type="VARCHAR(200)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-8">
+		<createTable tableName="rebelde">
+			<column name="id" type="BIGINT">
+				<constraints nullable="false" primaryKey="true"
+					primaryKeyName="rebeldePK" />
+			</column>
+			<column name="denuncias" type="INTEGER">
+				<constraints nullable="false" />
+			</column>
+			<column name="genero" type="VARCHAR(100)">
+				<constraints nullable="false" />
+			</column>
+			<column name="idade" type="INTEGER">
+				<constraints nullable="false" />
+			</column>
+			<column name="nome" type="VARCHAR(200)">
+				<constraints nullable="false" />
+			</column>
+			<column name="localizacao_id" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-9">
+		<createTable tableName="troca">
+			<column name="id" type="BIGINT">
+				<constraints nullable="false" primaryKey="true"
+					primaryKeyName="trocaPK" />
+			</column>
+			<column name="parte_id" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="contra_parte_id" type="BIGINT" />
+		</createTable>
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-10">
+		<createTable tableName="oferta">
+			<column name="item_id" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="troca_id" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-11">
+		<createTable tableName="procura">
+			<column name="item_id" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="troca_id" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-12">
+		<addForeignKeyConstraint
+			baseColumnNames="item_id" baseTableName="inventario"
+			constraintName="FK2vqt5a7ac7fu3ghgeiurdcahe" deferrable="false"
+			initiallyDeferred="false" referencedColumnNames="id"
+			referencedTableName="item" validate="true" />
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-13">
+		<addForeignKeyConstraint
+			baseColumnNames="rebelde_id" baseTableName="inventario"
+			constraintName="FKl472gvx46slnn5n33ueqooxw6" deferrable="false"
+			initiallyDeferred="false" referencedColumnNames="id"
+			referencedTableName="rebelde" validate="true" />
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-14">
+		<addForeignKeyConstraint
+			baseColumnNames="localizacao_id" baseTableName="rebelde"
+			constraintName="FKq31ctji601d7jurubkg2yynh4" deferrable="false"
+			initiallyDeferred="false" referencedColumnNames="id"
+			referencedTableName="localizacao" validate="true" />
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-15">
+		<addForeignKeyConstraint
+			baseColumnNames="item_id" baseTableName="oferta"
+			constraintName="FK_oferta_item" deferrable="false"
+			initiallyDeferred="false" referencedColumnNames="id"
+			referencedTableName="item" validate="true" />
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-16">
+		<addForeignKeyConstraint
+			baseColumnNames="troca_id" baseTableName="oferta"
+			constraintName="FK_oferta_troca" deferrable="false"
+			initiallyDeferred="false" referencedColumnNames="id"
+			referencedTableName="troca" validate="true" />
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-17">
+		<addForeignKeyConstraint
+			baseColumnNames="item_id" baseTableName="procura"
+			constraintName="FK_procura_item" deferrable="false"
+			initiallyDeferred="false" referencedColumnNames="id"
+			referencedTableName="item" validate="true" />
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-18">
+		<addForeignKeyConstraint
+			baseColumnNames="troca_id" baseTableName="procura"
+			constraintName="FK_procura_troca" deferrable="false"
+			initiallyDeferred="false" referencedColumnNames="id"
+			referencedTableName="troca" validate="true" />
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-19">
+		<addForeignKeyConstraint
+			baseColumnNames="parte_id" baseTableName="troca"
+			constraintName="FK_TROCA_PARTE" deferrable="false"
+			initiallyDeferred="false" referencedColumnNames="id"
+			referencedTableName="rebelde" validate="true" />
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-20">
+		<addForeignKeyConstraint
+			baseColumnNames="contra_parte_id" baseTableName="troca"
+			constraintName="FK_TROCA_CONTRA_PARTE" deferrable="false"
+			initiallyDeferred="false" referencedColumnNames="id"
+			referencedTableName="rebelde" validate="true" />
+	</changeSet>
+	<changeSet author="bruno" id="1624734705359-21">
+		<createSequence sequenceName="hibernate_sequence" />
+	</changeSet>
+</databaseChangeLog>

@@ -1,0 +1,37 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.10.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.10.xsd">
+
+	<changeSet author="bruno" id="2021-06-26-init-1">
+		<insert tableName="item">
+			<column name="id" value="1" />
+			<column name="nome" value="Arma" />
+			<column name="ponto" value="4" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-init-2">
+		<insert tableName="item">
+			<column name="id" value="2" />
+			<column name="nome" value="Municao" />
+			<column name="ponto" value="3" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-init-3">
+		<insert tableName="item">
+			<column name="id" value="3" />
+			<column name="nome" value="Agua" />
+			<column name="ponto" value="2" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-init-4">
+		<insert tableName="item">
+			<column name="id" value="4" />
+			<column name="nome" value="Comida" />
+			<column name="ponto" value="1" />
+		</insert>
+	</changeSet>
+</databaseChangeLog>

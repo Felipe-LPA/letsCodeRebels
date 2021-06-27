@@ -1,0 +1,229 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.10.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.10.xsd">
+
+	<changeSet author="bruno" id="2021-06-26-test-1">
+		<insert tableName="localizacao">
+			<column name="id" value="50" />
+			<column name="base" value="Jedi Temple" />
+			<column name="galaxia" value="Orla Exterior" />
+			<column name="latitude" value="0.12345" />
+			<column name="longitude" value="-0.54321" />
+			<column name="nome" value="Lothal" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-2">
+		<insert tableName="rebelde">
+			<column name="id" value="50" />
+			<column name="denuncias" value="0" />
+			<column name="genero" value="Masculino" />
+			<column name="idade" value="15" />
+			<column name="nome" value="Ezra Bridger" />
+			<column name="localizacao_id" value="50" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-3">
+		<insert tableName="inventario">
+			<column name="item_id" value="1" />
+			<column name="rebelde_id" value="50" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-4">
+		<insert tableName="inventario">
+			<column name="item_id" value="3" />
+			<column name="rebelde_id" value="50" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-5">
+		<insert tableName="inventario">
+			<column name="item_id" value="2" />
+			<column name="rebelde_id" value="50" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-6">
+		<insert tableName="rebelde">
+			<column name="id" value="51" />
+			<column name="denuncias" value="2" />
+			<column name="genero" value="Feminino" />
+			<column name="idade" value="15" />
+			<column name="nome" value="Sabine" />
+			<column name="localizacao_id" value="50" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-7">
+		<insert tableName="inventario">
+			<column name="item_id" value="4" />
+			<column name="rebelde_id" value="51" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-8">
+		<insert tableName="inventario">
+			<column name="item_id" value="2" />
+			<column name="rebelde_id" value="51" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-9">
+		<insert tableName="localizacao">
+			<column name="id" value="51" />
+			<column name="base" value="Jedi Temple" />
+			<column name="galaxia" value="Orla Exterior" />
+			<column name="latitude" value="0.12346" />
+			<column name="longitude" value="-0.54320" />
+			<column name="nome" value="Lothal" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-10">
+		<insert tableName="rebelde">
+			<column name="id" value="52" />
+			<column name="denuncias" value="100" />
+			<column name="genero" value="Masculino" />
+			<column name="idade" value="50" />
+			<column name="nome" value="Darth Maul" />
+			<column name="localizacao_id" value="51" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-11">
+		<insert tableName="inventario">
+			<column name="item_id" value="2" />
+			<column name="rebelde_id" value="52" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-12">
+		<insert tableName="rebelde">
+			<column name="id" value="53" />
+			<column name="denuncias" value="2" />
+			<column name="genero" value="Nenhum" />
+			<column name="idade" value="100" />
+			<column name="nome" value="C3PO" />
+			<column name="localizacao_id" value="50" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-13">
+		<insert tableName="inventario">
+			<column name="item_id" value="1" />
+			<column name="rebelde_id" value="53" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-14">
+		<insert tableName="inventario">
+			<column name="item_id" value="3" />
+			<column name="rebelde_id" value="53" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-15">
+		<insert tableName="inventario">
+			<column name="item_id" value="3" />
+			<column name="rebelde_id" value="53" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-16">
+		<insert tableName="rebelde">
+			<column name="id" value="54" />
+			<column name="denuncias" value="2" />
+			<column name="genero" value="Nenhum" />
+			<column name="idade" value="100" />
+			<column name="nome" value="R2 D2" />
+			<column name="localizacao_id" value="50" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-17">
+		<insert tableName="inventario">
+			<column name="item_id" value="1" />
+			<column name="rebelde_id" value="54" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-18">
+		<insert tableName="inventario">
+			<column name="item_id" value="3" />
+			<column name="rebelde_id" value="54" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-19">
+		<insert tableName="inventario">
+			<column name="item_id" value="3" />
+			<column name="rebelde_id" value="54" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-20">
+		<insert tableName="rebelde">
+			<column name="id" value="55" />
+			<column name="denuncias" value="5" />
+			<column name="genero" value="Nenhum" />
+			<column name="idade" value="100" />
+			<column name="nome" value="R1 D10" />
+			<column name="localizacao_id" value="50" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-21">
+		<insert tableName="inventario">
+			<column name="item_id" value="1" />
+			<column name="rebelde_id" value="55" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-22">
+		<insert tableName="inventario">
+			<column name="item_id" value="3" />
+			<column name="rebelde_id" value="55" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-23">
+		<insert tableName="inventario">
+			<column name="item_id" value="3" />
+			<column name="rebelde_id" value="55" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-24">
+		<insert tableName="troca">
+			<column name="id" value="50" />
+			<column name="parte_id" value="53" />
+			<column name="contra_parte_id" value="54" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-25">
+		<insert tableName="oferta">
+			<column name="item_id" value="1" />
+			<column name="troca_id" value="50" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-26">
+		<insert tableName="procura">
+			<column name="item_id" value="3" />
+			<column name="troca_id" value="50" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-27">
+		<insert tableName="procura">
+			<column name="item_id" value="3" />
+			<column name="troca_id" value="50" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-28">
+		<insert tableName="troca">
+			<column name="id" value="51" />
+			<column name="parte_id" value="54" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-29">
+		<insert tableName="oferta">
+			<column name="item_id" value="1" />
+			<column name="troca_id" value="51" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-30">
+		<insert tableName="procura">
+			<column name="item_id" value="3" />
+			<column name="troca_id" value="51" />
+		</insert>
+	</changeSet>
+	<changeSet author="bruno" id="2021-06-26-test-31">
+		<insert tableName="procura">
+			<column name="item_id" value="3" />
+			<column name="troca_id" value="51" />
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>
