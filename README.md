@@ -1,5 +1,7 @@
 # Desafio de 1 fim de semana Let´s Code
 
+<a href="https://www.codefactor.io/repository/github/brunoppinho/letscoderebels"><img src="https://www.codefactor.io/repository/github/brunoppinho/letscoderebels/badge" alt="CodeFactor" /></a>
+
 ## Star Wars Resistence Social Network
 ### Descrição do problema
 
